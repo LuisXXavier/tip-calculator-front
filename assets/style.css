@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --body-background: #c5e4e7;
+  --form-background: #fff;
+  --button-background: #00474b;
+  --input-background: #f3f9fa;
+  --label-color: #5e7a7d;
+  --value-color: #00474b;
+  --button-color: #fff;
+  --custom-color: #547878;
+  --result-color: #26c2ae;
+  --reset-color: #00474b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  padding-top: 50px;
+  background: var(--body-background);
+}
+
+/* =====OTHERS===== */
+
+form {
+  border-radius: 25px 25px 0px 0px;
+  background: var(--form-background);
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.left-column h4 {
+    color: var(--label-color);
+  }
+  
+  .bill-input,
+  .people-input {
+    display: flex;
+    position: relative;
+  }
+  
+  .bill-input img,
+  .people-input img {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .bill-input input,
+  .people-input input {
+    display: flex;
+    border-radius: 5px;
+    background: var(--input-background);
+    border: none;
+    height: 48px;
+    flex-grow: 1;
+    padding-left: 40px;
+    padding-right: 18px;
+    text-align: right;
+    color: var(--value-color);
+    font-size: 1.5rem;
+  }
+
+  .bill-input input:focus:invalid,
+  .people-input input:focus:invalid {
+    border: 1px solid red;
+  }
+  
+  input:focus-visible {
+    outline: none;
+  }
+
+  input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+  }
+
+/* =====OTHERS===== */
+
+/* =====BILL===== */
+
+.bill-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* =====BILL===== */
+
+/* =====TIP===== */
+
+.tip-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tip-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tip-inputs input {
+  height: 48px;
+  flex: 1 0 145px;
+  border-radius: 5px;
+  border: none;
+  background: var(--button-background);
+  color: var(--button-color);
+  font-size: 1.5rem;
+  transition: 0.1s;
+}
+
+.tip-inputs input:active {
+  background: var(--result-color);
+  color: var(--button-background);
+}
+
+.tip-wrapper input[type=number] {
+    height: 48px;
+    width: 178.922px;
+    text-align: center;
+    background: var(--input-background);
+    color: var(--custom-color);
+}
+
+/* =====TIP===== */
+
+/* =====PEOPLE===== */
+
+.people-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* =====PEOPLE===== */
+
+/* =====FOOTER===== */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--reset-color);
+  border-radius: 15px;
+  padding: 32px;
+}
+
+.footer .amount,
+.footer .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.footer .amount-result,
+.footer .total-result {
+    letter-spacing: -0.667px
+}
+
+.footer h4 {
+  color: var(--button-color);
+  font-size: 1rem;
+}
+
+.footer p {
+  color: var(--label-color);
+  font-size: 0.813rem;
+}
+
+.footer .total-result, .footer .amount-result {
+  color: var(--result-color);
+  font-size: 2rem;
+}
+
+.footer button {
+    height: 48px;
+    background: var(--result-color);
+    color: var(--button-background);
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* =====FOOTER===== */
+
+
+@media (min-width: 1000px) {
+
+    form {
+        flex-direction: row;
+        width: 920px;
+        height: 481px;
+        border-radius: 25px;
+    }
+
+    .footer {
+        width: 413px;
+        height: 417px;
+        border-radius: 15px;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .footer button {
+        margin-top: auto;
+    }
+}

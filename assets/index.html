@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./SPLITTER.svg" alt="logo splitter" />
+    </header>
+
+    <!-- ===== CONTAINER FORMULARIO ===== -->
+    <form id="form">
+      <div class="left-column">
+        <!-- ===== BILL ===== -->
+        <div class="bill-wrapper">
+          <h4 for="bill">Bill</h4>
+          <div class="bill-input">
+            <img src="./$.svg" alt="logo cipher" />
+            <input id="bill" type="number" placeholder="0" min="1" required="required"/>
+          </div>
+        </div>
+        <!-- ===== BILL ===== -->
+
+        <!-- ===== TIP ===== -->
+        <div class="tip-wrapper">
+          <h4>Select Tip %</h4>
+          <div class="tip-inputs">
+            <input type="button" value="5%" />
+            <input type="button" value="10%" />
+            <input type="button" value="15%" class="tip-inputs-15"/>
+            <input type="button" value="25%" />
+            <input type="button" value="50%" />
+            <input type="number" placeholder="Custom" />
+          </div>
+        </div>
+        <!-- ===== TIP ===== -->
+
+        <!-- ===== PEOPLE ===== -->
+        <div class="people-wrapper">
+          <h4>Number of People</h4>
+          <div class="people-input">
+            <img src="./people.svg" alt="logo people" />
+            <input type="number" placeholder="0" min="1" required="required"/>
+          </div>
+        </div>
+        <!-- ===== PEOPLE ===== -->
+      </div>
+      <!-- ===== TIP ===== -->
+      <div class="footer">
+        <div class="amount">
+          <div class="amount-text">
+            <h4>Tip Amount</h4>
+            <p>/ person</p>
+          </div>
+          <p class="amount-result">$4.27</p>
+        </div>
+        <!-- ===== TIP ===== -->
+        <!-- ===== TOTAL ===== -->
+        <div class="total">
+          <div class="total-text">
+            <h4>Total</h4>
+            <p>/ person</p>
+          </div>
+          <p class="total-result">$32.79</p>
+        </div>
+        <button id="reset" class="reset">RESET</button>
+      </div>
+      <!-- ===== TOTAL ===== -->
+    </form>
+
+    <!-- ===== CONTAINER FORMULARIO ===== -->
+  </body>
+</html>
